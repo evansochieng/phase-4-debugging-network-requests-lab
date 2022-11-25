@@ -62,12 +62,12 @@ developing your own process.
 
 - Add a new toy when the toy form is submitted
 
-  - How I debugged:
+  - How I debugged: Check the Network tab of browser console, got a server error. In the terminal where Rails server is running, saw it's a error in the create method at line 10 of the controller. Checking this, it's a spelling error of the name of the model, Toy.
 
 - Update the number of likes for a toy
 
-  - How I debugged:
+  - How I debugged: The frontend expects some content to be returned in the response of the PATCH request and parse to JSON but the update method is not returning any content. I need to render JSON from the PATCH request from the backend.
 
 - Donate a toy to Goodwill (and delete it from our database)
 
-  - How I debugged:
+  - How I debugged: From the terminal where rails server is running, the error was that there was no route for DELETE action. I need to add that in routes.rb
